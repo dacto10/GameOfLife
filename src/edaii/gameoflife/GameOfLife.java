@@ -49,7 +49,7 @@ public class GameOfLife {
 	}
 	
 	public static List<List<Color>> computeGridColors(final List<List<Cell>> grid) {
-		return (List<List<Color>>) grid.stream()
+		return grid.stream()
 				.map(list -> (List<Color>) list.stream()
 						.map(cell -> {
 							final int neighbours = countAliveNeighbours(grid, cell.getRow(), cell.getColumn());
